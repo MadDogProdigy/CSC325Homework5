@@ -1,3 +1,5 @@
+#created a random word search generator
+#Note: allows for the inclusion of x
 from random import *
 def puzzleGen(size):
         puzzle = [[]*size]*size
