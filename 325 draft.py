@@ -38,14 +38,13 @@ def getGrid(size=5):
                    [(r,c-1),          (r,c+1)],
                    [(r+1,c-1),(r+1,c) ,(r+1,c+1)] ]
 
-    # simply remove the if's below if you want to add support for a grid that wraps round
     
     # if we are on the edge column of the grid
     if c == 0:
         # left edge -> keep the 2 rightmost columns
         res = [n[1:] for n in neighbors]
     elif c == gsize-1:
-        # right edge -> keep the two leftmost colums
+        # right edge -> keep the two leftmost columns
         res = [neighbors[0][0:2], [neighbors[1][0]], neighbors[2][0:2]]
     else:
         # somewhere in the grid, keep everything
